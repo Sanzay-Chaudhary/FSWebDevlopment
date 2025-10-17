@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, Menu, X, Code, Briefcase, User, Home } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   const webDevSkills = [
     'HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Next.js', 'Python'
@@ -94,9 +96,22 @@ export default function Portfolio() {
       <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
-            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-6xl font-bold shadow-2xl shadow-purple-500/50 hover:scale-105 transition transform border-4 border-purple-400">
-              <span className="text-white">SK</span>
+            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-6xl font-bold shadow-2xl shadow-purple-500/50 hover:scale-105 transition transform border-4 border-purple-400 overflow-hidden">
+              {!imageError ? (
+                <Image
+                  src="/myProfile.jpg"
+                  alt="Sanjay Kumar Chaudhary"
+                  width={160}
+                  height={160}
+                  className="rounded-full object-cover w-full h-full"
+                  onError={() => setImageError(true)}
+                  priority
+                />
+              ) : (
+                <span className="text-white">SK</span>
+              )}
             </div>
+
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
             Sanjay Kumar Chaudhary
