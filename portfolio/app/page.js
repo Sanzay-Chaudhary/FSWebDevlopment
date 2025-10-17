@@ -95,15 +95,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-6xl font-bold shadow-2xl shadow-purple-500/50 hover:scale-105 transition transform border-4 border-purple-400">
-              <img
-                src="/myProfile.jpg"
-                alt="Sanjay Kumar Chaudhary"
-                className="w-full h-full rounded-full object-cover"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = '<span class="text-white">SK</span>';
-                }}
-              />
+              <span className="text-white">SK</span>
             </div>
           </div>
           <h1 className="text-5xl sm:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-pulse">
@@ -155,8 +147,7 @@ export default function Portfolio() {
           </h2>
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 shadow-xl">
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm an IT graduate with a passion for building innovative solutions. As a hardworking and dedicated
-              Full Stack Developer, I'm always ready to learn new things and embrace challenges. I believe in
+              Full Stack Developer, I&apos;m always ready to learn new things and embrace challenges. I believe in
               continuous growth and staying updated with the latest technologies to create impactful applications
               that solve real-world problems.
             </p>
