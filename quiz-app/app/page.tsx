@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-// import Quiz from "./components/Quiz";
+// import Quiz from "./qu;
 export default function HomePage() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [name, setName] = useState("");
