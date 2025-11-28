@@ -1,6 +1,6 @@
 // Quiz.js
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { quiz } from '../questionSet/page';
 import ScoreCard from '../scoreCard/page';
 

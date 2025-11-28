@@ -8,8 +8,8 @@ export const quiz = {
                 "Applied Programming Interface",
                 "Application Performance Index",
                 "Application Program Interface"],
-            correctAnswer: "Application Programming Interface"
-        }
+            correctAnswer: "Application Programming Interface",
+        },
         {
             id: 3,
             question: `Which programming language is often 
