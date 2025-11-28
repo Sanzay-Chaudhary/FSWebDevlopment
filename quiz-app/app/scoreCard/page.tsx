@@ -1,7 +1,21 @@
 
 import React from 'react';
 
-const ScoreCard = ({ quizResult, questions, name }) => {
+interface QuizResult {
+    score: number;
+    correctAnswers: number;
+    wrongAnswers: number;
+}
+
+type Question = unknown;
+
+interface ScoreCardProps {
+    quizResult: QuizResult;
+    questions: Question[];
+    name: string;
+}
+
+const ScoreCard: React.FC<ScoreCardProps> = ({ quizResult, questions, name }) => {
     const passPercentage = 60;
 
     const percentage = (quizResult.score / (questions.length * 5)) * 100;
