@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-// import Quiz from "./qu;
+import Quiz from "./quiz/page";
 export default function HomePage() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [name, setName] = useState("");
@@ -10,7 +10,7 @@ export default function HomePage() {
         <h1 className="text-success mtb-1">Sanzay</h1>
         <h3 className="mb-4">Quiz App</h3>
       </div>
-      {/* (quizStarted ? (<Quiz name={name} />) : ( */}
+      (quizStarted ? (<Quiz name={name} />) : (
       <>
         <div className="mb-3">
           <label htmlFor="nameInput" className="form-label">
