@@ -39,4 +39,4 @@ export const quiz = {
     ] as Question[],
 };
 
-export default Quiz;
+export default quiz;
