@@ -4,11 +4,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { quiz } from '../questionSet/page';
 import ScoreCard from '../scoreCard/page';
 
-const Quiz = ({ name }) => {
+type Props = {
+    name: string;
+};
+
+const Quiz = ({ name }: Props) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState('');
     const [answerChecked, setAnswerChecked] = useState(false);
-    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+    const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);
     const [showResults, setShowResults] = useState(false);
     const [quizResult, setQuizResult] = useState({
         score: 0,
@@ -20,7 +24,7 @@ const Quiz = ({ name }) => {
     const { question, answers, correctAnswer } =
         questions[currentQuestionIndex];
 
-    const onAnswerSelected = (answer, idx) => {
+    const onAnswerSelected = (answer: string, idx: number) => {
         setSelectedAnswerIndex(idx);
         setSelectedAnswer(answer);
         setAnswerChecked(true);
@@ -57,7 +61,7 @@ const Quiz = ({ name }) => {
                     <div className='card p-4'>
                         <h4>{question}</h4>
                         <ul className='list-group'>
-                            {answers.map((answer, idx) => (
+                            {(answers ?? []).map((answer, idx) => (
                                 <li
                                     key={idx}
                                     onClick={() => onAnswerSelected(answer, idx)}
