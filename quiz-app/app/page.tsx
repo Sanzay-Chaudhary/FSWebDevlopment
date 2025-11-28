@@ -1,10 +1,10 @@
 'use client';
-import { useState } from "react";
-import Quiz from "./quiz/page";
+import { useState } from 'react';
+import Quiz from './quiz/page';
 
 export default function HomePage() {
   const [quizStarted, setQuizStarted] = useState(false);
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
 
   return (
     <div className="container mt-5 ml-5">

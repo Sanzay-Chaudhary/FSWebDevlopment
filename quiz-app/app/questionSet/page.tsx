@@ -1,43 +1,42 @@
+export type Question = {
+    id: number;
+    question: string;
+    answers: string[];
+    correctAnswer: string;
+};
+
 export const quiz = {
     questions: [
         {
             id: 1,
-            question: "What does API stand for?",
+            question: 'What does API stand for?',
             answers: [
-                "Application Programming Interface",
-                "Applied Programming Interface",
-                "Application Performance Index",
-                "Application Program Interface"
+                'Application Programming Interface',
+                'Applied Programming Interface',
+                'Application Performance Index',
+                'Application Program Interface',
             ],
-            correctAnswer: "Application Programming Interface",
+            correctAnswer: 'Application Programming Interface',
         },
         {
-            id: 3,
-            question: "Which programming language is often used for building web servers?",
+            id: 2,
+            question: 'Which programming language is often used for building web servers?',
             answers: ['Java', 'Python', 'JavaScript', 'C#'],
             correctAnswer: 'JavaScript',
         },
         {
-            id: 4,
+            id: 3,
             question: 'What is the purpose of SQL?',
-            answers: [
-                'Styling web pages',
-                'Querying databases',
-                'Creating animations',
-                'Developing mobile apps',
-            ],
+            answers: ['Styling web pages', 'Querying databases', 'Creating animations', 'Developing mobile apps'],
             correctAnswer: 'Querying databases',
         },
         {
-            id: 5,
+            id: 4,
             question: 'What does MVC stand for in web development?',
-            answers: [
-                'Model View Controller',
-                'Model Visual Controller',
-                'Model View Component',
-                'Model Visual Component',
-            ],
+            answers: ['Model View Controller', 'Model Visual Controller', 'Model View Component', 'Model Visual Component'],
             correctAnswer: 'Model View Controller',
         },
-    ],
+    ] as Question[],
 };
+
+export default quiz;
