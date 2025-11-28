@@ -1,4 +1,4 @@
-// ScoreCard.js
+
 import React from 'react';
 
 const ScoreCard = ({ quizResult, questions, name }) => {
