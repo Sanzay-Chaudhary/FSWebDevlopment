@@ -1,8 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-// If you want Bootstrap styles enable the import and install bootstrap in your project
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import { quiz } from '../questionSet/page';
 import ScoreCard from '../scoreCard/page';
 import type { Question } from '../questionSet/page';
