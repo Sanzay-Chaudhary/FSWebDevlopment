@@ -60,4 +60,4 @@ const ScoreCard: React.FC<ScoreCardProps> = ({ quizResult, questions, name }) =>
     );
 };
 
-export default scoreCard;
+export default ScoreCard;
